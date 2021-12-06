@@ -1,0 +1,79 @@
+#navbar .nav {
+  height: 90px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navbar .nav li {
+  text-transform: uppercase;
+  position: relative;
+}
+
+#navbar .nav li::after {
+  content: "";
+  height: 1px;
+  width: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: black;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#navbar .nav li:hover::after {
+  width: 100%;
+}
+
+#navbar .nav li:hover .open-list {
+  height: 265px;
+}
+
+#navbar .nav li a {
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  letter-spacing: 4px;
+}
+
+#navbar .title {
+  line-height: 89px;
+}
+
+#navbar .open-list {
+  background-color: #f7f4eb;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 200px;
+  top: 90px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  font-size: 14px;
+}
+
+#navbar .open-list .open {
+  padding: 20px 0;
+}
+
+#navbar .open-list .open li {
+  padding: 8px 30px;
+  position: relative;
+}
+
+#navbar .open-list .open li::after {
+  content: "";
+  height: 1px;
+  width: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: black;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#navbar .open-list .open li:hover::after {
+  width: 100%;
+}
